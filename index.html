@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The app can be used to determine the likelyhood of having a cold or allergies based off of the results of 4 questions. 
  
 Known Issues:
-blah, blah, blah, blah
+The results button on the last page doesn't work. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -38,24 +38,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
-
+// variables for the cold and allergies 
 
         function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert("allergy_count: " + allergy_count);
-
+            allergy_count = allergy_count + 1; 
+		alert("allergy_count: " + allergy_count); 
+//The above function allows for the answers that correlate to allergies be added together. 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
 		alert("cold_count: " + cold_count);
-        
+// The above function allows for the answer that correlate to allergies be added together.        
 	}
 	
 	function displayResults(){
 		var total = allergy_count + cold_count;
 		alert("allergy percentage: " + (allergy_count / total) * 100 +
 		      "\cold percentage: " + (cold_count / total) * 100);
+	// The function calculates the data into precentages and displays the results. Having trouble getting the results to pop up have checked over code with multiple people and haven't resolved the problem. 
 	}
 	
   </script>
@@ -85,7 +86,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
+<div id="header" class="w3-container w3-flat-carrot"> <!-- Header and title of the page-->
 	<h1>Cold or Allergies?</h1>
 </div>
 	
@@ -98,61 +99,61 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"> <!-- creates the header and title of the page-->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>    
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+    	<div id="content" class="w3-container"> <!-- creates the container for text-->
+        <p>Are your eyes watery or itchy?</p>   <!-- Question the page is asking--> 
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!-- The next two lines are the buttons for cold or allergy.-->
 	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
     	</div>
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"><!-- Next lines of code create the header and title of the page. -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Do you have a fever?</p>
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+	<div id="content" class="w3-container"> <!-- creates the container for text on the page--> 
+	<p>Do you have a fever?</p> <!-- Question the page is asking.--> 
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a> <!-- The next two lines are the buttons for cold or allergy.-->
         <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>	
 	
-<div class="page" id="three">
+<div class="page" id="three"> <!-- Next lines of code create the header and title of the page.--> 
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Do you have a sore throat?</p>
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a>
+	<div id="content" class="w3-container"> <!-- creates the container for text on the page.-->
+	<p>Do you have a sore throat?</p> <!-- question the page is asking.--> 
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> Yes </a><!-- The next two linews are the buttons for cold or allergy.--> 
         <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>	
 	
-<div class="page" id="four">
+<div class="page" id="four"> <!-- Next lines of code create the header and title of the page.--> 
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
 	
-	<div id="content" class="w3-container">
-	<p>Are your symptoms seasonal or chronic??</p>
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a>
+	<div id="content" class="w3-container"> <!-- creates the container for text on the page.--> 
+	<p>Are your symptoms seasonal or chronic??</p><!-- Question the page is asking.--> 
+	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes </a> <!-- The next two lines are the buttons for cold or allergies. --> 
 	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black"> No </a>
 	</div>
 </div>	
 	
-<div class="page" id="five">
+<div class="page" id="five"> <!-- creates the header and title for the page.--> 
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
-	<div id="content" class="w3-container">
+	<div id="content" class="w3-container"> <!-- container for text.-->
 	<p>Results</p>
-		<a onclick="displayResults();" class="w3-btn w3-grey w3-round"> Show Results </a>		
+		<a onclick="displayResults();" class="w3-btn w3-grey w3-round"> Show Results </a><!-- Button pops up on the screen but nothing happes when clicked not sure where the problem is coming from.--> 	
 </div>			    
 	<footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
